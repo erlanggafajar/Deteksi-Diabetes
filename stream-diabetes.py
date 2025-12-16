@@ -2,6 +2,11 @@ import pickle
 import streamlit as st
 import numpy as np
 
+st.set_page_config(
+    page_title="Aplikasi Prediksi Diabetes",
+    layout="wide"    
+)
+
 # load model + scaler
 model_data = pickle.load(open("diabetes_model_x.sav", "rb"))
 diabetes_model = model_data["model"]
